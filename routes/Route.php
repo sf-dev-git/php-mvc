@@ -6,8 +6,6 @@ class Route
     public static function run()
     {
         $http_method = $_SERVER['REQUEST_METHOD'];
-        $data = null;
-        if ($http_method == 'POST') $data = $_POST;
         $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
         foreach (self::$routes[$http_method] as $pattern => $action) {
@@ -19,7 +17,7 @@ class Route
 
                 include 'app/http/controllers/'.$controller.'.php';
                 $controller = new $controller;
-                $controller->$method($data == null ? $matches : $data);
+                call_user_func_array(array($controller, $method), array(!empty($matches[1])?$matches[1] : null));
                 exit;
             }
         }
