@@ -1,12 +1,12 @@
 <?php
-include 'View.php';
-include 'Request.php';
+include 'traits/View.php';
+
 class BaseController
 {
-    protected $view, $request;
+    use View, Request;
+
     public function __construct()
     {
-        $this->view = new View;
-        $this->request = new Request;
+        $this->set_request();
     }
 }

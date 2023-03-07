@@ -1,14 +1,18 @@
 <?php
+include 'traits/Request.php';
 class Route
 {
+    use Request;
+
     protected static $routes = [];
 
     public static function run()
     {
-        $http_method = $_SERVER['REQUEST_METHOD'];
-        $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $req = new Route();
+        $req->set_request();
+        $url = parse_url($req->req_uri(), PHP_URL_PATH);
 
-        foreach (self::$routes[$http_method] as $pattern => $action) {
+        foreach (self::$routes[$req->req_method()] as $pattern => $action) {
             $pattern = preg_replace('/:(\w+)/', '(?P<\1>\d+)', $pattern);
             $pattern = str_replace('/', '\/', $pattern);
 
