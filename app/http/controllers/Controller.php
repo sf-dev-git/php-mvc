@@ -1,13 +1,17 @@
 <?php
+include 'BaseController.php';
 
-class Controller
+class Controller extends BaseController
 {
     public function index() {
-        include 'resources/views/index.php';
+        $this->render('index');
     }
 
-    public function post($post) {
-        var_dump($post);
-        include 'resources/views/index.php';
+    public function post() {
+        $this->render('index', ['test' => $this->req_get('test')]);
+    }
+
+    public function show($id) {
+        $this->render('index', ['test' => $id]);
     }
 }
