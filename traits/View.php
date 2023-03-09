@@ -1,11 +1,6 @@
 <?php
 trait View
 {
-    public function redirect(string $url)
-    {
-        return header('Location: ' . $url);
-    }
-
     public function render(string $view, array $data = [])
     {
         extract($data);
