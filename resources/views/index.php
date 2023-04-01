@@ -4,3 +4,11 @@
 </form>
 
 <h1><?php echo !empty($test) ? $test: 'Test'; ?></h1>
+
+<?php
+if (!empty($user)) {
+    echo "<strong>" .$user['username']. "</strong>".
+         "<p>Name: " .$user['name']. "</p>".
+         "<p>Age: " .$user['age']. "</p>";
+}
+?>
