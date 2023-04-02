@@ -1,4 +1,5 @@
 <?php
+
 include 'traits/View.php';
 include 'traits/Response.php';
 
