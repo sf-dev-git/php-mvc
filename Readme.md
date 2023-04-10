@@ -1,7 +1,5 @@
 # PHP-MVC
 
----
-
 ```mermaid
 
 flowchart TB
@@ -13,13 +11,13 @@ flowchart TB
 ```
 
 Model
-: Models can be found in [app/models](tree/main/app/models) dir.
+: Models can be found in [app/models](/sf-dev-git/php-mvc/tree/main/app/models) dir.
 
 Controller
-: Controllers can be found in [app/controllers](tree/main/app/controllers) dir.
+: Controllers can be found in [app/controllers](/sf-dev-git/php-mvc/tree/main/app/controllers) dir.
 
 View
-: Views can be found in [resources/views](tree/main/resources/views) dir.
+: Views can be found in [resources/views](/sf-dev-git/php-mvc/tree/main/resources/views) dir.
 
 ## Links
 
