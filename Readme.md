@@ -11,13 +11,13 @@ flowchart TB
 ```
 
 Model
-: Models can be found in app/models dir.
+: Models can be found in `app/models` dir.
 
 Controller
-: Controllers can be found in app/controllers dir.
+: Controllers can be found in `app/controllers` dir.
 
 View
-: Views can be found in resources/views dir.
+: Views can be found in `resources/views` dir.
 
 ## Links
 
